@@ -40,62 +40,62 @@ The setup includes a secure and scalable environment with public and private sub
    Add route to Internet Gateway
    Assign it to Public Subnets
 
-Create Private Route Table
-- Keep it internal (no direct internet)
-- Assign it to Private Subnet
+5. Create Private Route Table
+   Keep it internal (no direct internet)
+   Assign it to Private Subnet
 
-5. Create Security Group
+6. Create Security Group
    Create a Security Group inside VPC
    Allow: HTTP/HTTPS (Web access)
 
    SSH (Port 22)
    Assign this Security Group to all EC2 instances
 
-6. Launch EC2 Instances
+7. Launch EC2 Instances
    Create 3 EC2 instances (Ubuntu)
    Assign: 2 instances → Public Subnets
 
    1 instance → Private Subnet
    Attach Security Group and Key Pair
 
-7. Setup S3 Storage
+8. Setup S3 Storage
    Create an S3 Bucket
    Use it for storing application data/files
 
-8. Setup Database (RDS)
+9. Setup Database (RDS)
    Create RDS instance (MySQL)
    Assign it to your custom VPC
    Use Private Subnet for security
 
-9. Setup DynamoDB
+10. Setup DynamoDB
    Create DynamoDB table
    Use it for NoSQL data storage
 
-10. Create Load Balancer
+11. Create Load Balancer
     Create Application Load Balancer
     Assign it to Public Subnets
     Link it with EC2 instances using Target Group
 
-11. Create NAT Gateway
+12. Create NAT Gateway
     Create NAT Gateway in Public Subnet
     Attach Elastic IP
     Link it to Private Route Table
     This allows private server to access internet securely
 
-12. Setup IAM Role
+13. Setup IAM Role
     Create IAM Role with permissions (S3, RDS, DynamoDB)
     Assign this role to EC2 instances
 
-13. Deploy Application
+14. Deploy Application
     Connect to EC2 using SSH
     Install Python, Flask, dependencies
     Run your web application
 
-14. Connect Database
+15. Connect Database
     Connect your app to RDS endpoint
     Create tables and verify data storage
 
-15. Access Application via the Web Brouser or CMD.
+16. Access Application via the Web Brouser or CMD.
 
 Copy Load Balancer DNS
 👉 Open in browser to access your website
