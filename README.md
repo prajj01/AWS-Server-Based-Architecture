@@ -1,10 +1,10 @@
-## AWS-Server-Based-Architecture
+# AWS-Server-Based-Architecture
 All AWS resources were terminated after project completion to avoid charges (pay-as-you-go model)
 
 This project demonstrates a server-based architecture on AWS, where a web application is deployed using manually configured cloud infrastructure.
 The setup includes a secure and scalable environment with public and private subnets, load balancing, and database integration.
 
-# 🛠️ Tech Stack / Services
+### Tech Stack / Services
 
 - Compute: EC2 (Ubuntu Servers)
 - Networking: VPC, Subnets, Internet Gateway, NAT Gateway, Route Tables
@@ -13,7 +13,7 @@ The setup includes a secure and scalable environment with public and private sub
 - Security: IAM, Security Groups
 - Scalability: Load Balancer, Target Groups
 
-# ⚙️ Architecture Highlights
+### Architecture Highlights
 
 - Custom VPC with 3 subnets (2 Public + 1 Private)
 - Load Balancer distributing traffic across public servers
@@ -21,7 +21,7 @@ The setup includes a secure and scalable environment with public and private sub
 - NAT Gateway for controlled outbound access
 - IAM roles for secure service permissions
 
-# Steps 
+### Steps 
 1. Create VPC
    Create a Custom VPC
    Enable DNS support
